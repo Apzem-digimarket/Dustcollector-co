@@ -1,0 +1,13 @@
+# Private / machine-specific — never commit
+data/auth.php
+data/login-attempts.php
+data/*.log
+data/*.tmp
+uploads/*
+!uploads/.htaccess
+!uploads/index.html
+
+# OS / editor / build output
+.DS_Store
+*.tmp
+*.zip

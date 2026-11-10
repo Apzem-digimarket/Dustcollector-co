@@ -1,0 +1,70 @@
+# Dust Collector site — Apache / LiteSpeed (cPanel) settings
+DirectoryIndex index.php index.html
+
+# Branded "not found" page
+ErrorDocument 404 /product.php
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # --- Force HTTPS -------------------------------------------------------
+  # Turn this on ONLY after SSL is active (cPanel > SSL/TLS Status > Run AutoSSL).
+  # Remove the "#" from the next two lines, then check the site still loads.
+  # RewriteCond %{HTTPS} off
+  # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Tell PHP that clean URLs work, so links use /products/<name>
+  RewriteRule ^ - [E=PRETTY_URLS:1]
+
+  # Product pages: /products/<name>  ->  product.php?p=<name>
+  RewriteRule ^products/?$ index.php [L]
+  RewriteRule ^products/([A-Za-z0-9-]+)/?$ product.php?p=$1 [L,QSA]
+
+  # Sitemap for search engines
+  RewriteRule ^sitemap\.xml$ sitemap.php [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# Browser caching for images, fonts, CSS and JS (file names change when updated)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/gif "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType text/javascript "access plus 7 days"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+# Never serve hidden files, notes, backups, logs or temp files
+<FilesMatch "(^\.|\.(bak|tmp|log|md|zip)$)">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# router.php is only for local previews with PHP's built-in server
+<Files "router.php">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</Files>

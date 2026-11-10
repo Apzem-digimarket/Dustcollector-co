@@ -1,0 +1,713 @@
+{
+  "panel": {
+    "eyebrow": "Equipment range",
+    "title": "Dust collection equipment for industry.",
+    "intro": "A range of collector types for different materials, processes, and operating requirements. Final selection depends on application-specific engineering review.",
+    "cardLabel": "RANGE",
+    "showFilters": true,
+    "showCategoryOnCards": true,
+    "spotlight": {
+      "show": true,
+      "kicker": "Engineered dust control",
+      "title": "From point capture to plant-wide collection.",
+      "text": "Explore equipment for individual workstations, production lines, and centralised dust collection systems.",
+      "linkText": "Explore the equipment range",
+      "image": "assets/products/dust-collection-range-overview.jpg",
+      "alt": "Overview of industrial dust and fume collection equipment range"
+    }
+  },
+  "categories": [
+    {
+      "id": "pulse-jet",
+      "name": "Pulse jet & cartridge collectors"
+    },
+    {
+      "id": "bag-cyclone",
+      "name": "Bag filter & cyclone collectors"
+    },
+    {
+      "id": "specialised",
+      "name": "Specialised collectors"
+    },
+    {
+      "id": "workstations",
+      "name": "Workstations & paint booths"
+    }
+  ],
+  "products": [
+    {
+      "id": "p001",
+      "name": "Pulse jet bag filter",
+      "category": "pulse-jet",
+      "description": "Fabric bag filtration with pulse-jet cleaning. System sizing depends on gas flow, dust characteristics, and operating temperature.",
+      "image": "assets/products/pulse-jet-bag-filter.jpg",
+      "alt": "Pulse jet bag filter collector",
+      "link": "",
+      "visible": true,
+      "slug": "",
+      "overview": "",
+      "gallery": [],
+      "specs": [
+        {
+          "label": "Filtration",
+          "value": "Fabric filter bags",
+          "highlight": true
+        },
+        {
+          "label": "Cleaning",
+          "value": "Pulse-jet",
+          "highlight": true
+        },
+        {
+          "label": "Sizing basis",
+          "value": "Gas flow, dust characteristics and operating temperature",
+          "highlight": false
+        }
+      ],
+      "features": [],
+      "applications": []
+    },
+    {
+      "id": "p002",
+      "name": "Pulsejet Cartridge Dust Collector",
+      "category": "pulse-jet",
+      "description": "Cartridge filtration for industrial dust collection. Contact the team for model-specific airflow and filter data.",
+      "image": "",
+      "alt": "",
+      "link": "",
+      "visible": true,
+      "slug": "",
+      "overview": "",
+      "gallery": [],
+      "specs": [
+        {
+          "label": "Filtration",
+          "value": "Cartridge filters",
+          "highlight": true
+        },
+        {
+          "label": "Cleaning",
+          "value": "Pulse-jet",
+          "highlight": true
+        },
+        {
+          "label": "Airflow & filter data",
+          "value": "Model-specific — contact the team",
+          "highlight": false
+        }
+      ],
+      "features": [],
+      "applications": []
+    },
+    {
+      "id": "p003",
+      "name": "Cyclone dust collector",
+      "category": "bag-cyclone",
+      "description": "3 HP and 5 HP models listed, with outlet bag filtration. Confirm airflow and configuration for the selected model.",
+      "image": "assets/products/cyclone-cartridge-dust-collector.jpg",
+      "alt": "Cyclone dust collection equipment",
+      "link": "",
+      "visible": true,
+      "slug": "",
+      "overview": "",
+      "gallery": [],
+      "specs": [
+        {
+          "label": "Motor options",
+          "value": "3 HP and 5 HP",
+          "highlight": true
+        },
+        {
+          "label": "Primary separation",
+          "value": "Cyclone",
+          "highlight": true
+        },
+        {
+          "label": "Outlet filtration",
+          "value": "Bag filter",
+          "highlight": false
+        }
+      ],
+      "features": [],
+      "applications": []
+    },
+    {
+      "id": "p004",
+      "name": "Bag Filter Dust collectors",
+      "category": "bag-cyclone",
+      "description": "Baghouse collection systems. Filter area, airflow, and construction are selected for the process duty.",
+      "image": "",
+      "alt": "",
+      "link": "",
+      "visible": true,
+      "slug": "",
+      "overview": "",
+      "gallery": [],
+      "specs": [
+        {
+          "label": "Type",
+          "value": "Baghouse collection system",
+          "highlight": true
+        },
+        {
+          "label": "Filter area",
+          "value": "Selected for the process duty",
+          "highlight": false
+        },
+        {
+          "label": "Airflow",
+          "value": "Selected for the process duty",
+          "highlight": false
+        },
+        {
+          "label": "Construction",
+          "value": "Selected for the process duty",
+          "highlight": false
+        }
+      ],
+      "features": [],
+      "applications": []
+    },
+    {
+      "id": "p005",
+      "name": "Single Stage Dust Collector",
+      "category": "bag-cyclone",
+      "description": "SD510 · 3 HP · triple inlet · double collection bag. 30 μm bag filter standard; 5 μm option listed.",
+      "image": "assets/products/single-stage-dust-collector-sd510.jpg",
+      "alt": "SD510 single stage wood dust collector",
+      "link": "",
+      "visible": true,
+      "slug": "",
+      "overview": "",
+      "gallery": [],
+      "specs": [
+        {
+          "label": "Model",
+          "value": "SD510",
+          "highlight": false
+        },
+        {
+          "label": "Motor",
+          "value": "3 HP",
+          "highlight": true
+        },
+        {
+          "label": "Inlets",
+          "value": "Triple inlet",
+          "highlight": true
+        },
+        {
+          "label": "Collection",
+          "value": "Double collection bag",
+          "highlight": false
+        },
+        {
+          "label": "Bag filter (standard)",
+          "value": "30 μm",
+          "highlight": true
+        },
+        {
+          "label": "Bag filter (option)",
+          "value": "5 μm",
+          "highlight": false
+        }
+      ],
+      "features": [],
+      "applications": []
+    },
+    {
+      "id": "p006",
+      "name": "Mini Dust Collector – Model MDC700",
+      "category": "bag-cyclone",
+      "description": "1,190 CMH · 2 HP · SS304 · bag filter rated 99% at 5 μm · 750 × 750 × 1,400 mm.",
+      "image": "assets/products/mini-dust-collector-mdc700.jpg",
+      "alt": "MDC700 mini dust collector",
+      "link": "",
+      "visible": true,
+      "slug": "",
+      "overview": "",
+      "gallery": [],
+      "specs": [
+        {
+          "label": "Model",
+          "value": "MDC700",
+          "highlight": false
+        },
+        {
+          "label": "Airflow",
+          "value": "1,190 CMH",
+          "highlight": true
+        },
+        {
+          "label": "Motor",
+          "value": "2 HP",
+          "highlight": true
+        },
+        {
+          "label": "Construction",
+          "value": "SS304",
+          "highlight": false
+        },
+        {
+          "label": "Filter",
+          "value": "Bag filter",
+          "highlight": false
+        },
+        {
+          "label": "Stated efficiency",
+          "value": "99% at 5 μm",
+          "highlight": true
+        },
+        {
+          "label": "Dimensions",
+          "value": "750 × 750 × 1,400 mm",
+          "highlight": false
+        }
+      ],
+      "features": [],
+      "applications": []
+    },
+    {
+      "id": "p007",
+      "name": "Compact Dust Collector",
+      "category": "specialised",
+      "description": "CDC80 · 195 CMH · 1.2 kW · pre-filter + HEPA · stated efficiency 99.99% at 0.3 μm.",
+      "image": "assets/products/compact-dust-collector-cdc80.jpg",
+      "alt": "CDC80 compact dust and fume extractor",
+      "link": "",
+      "visible": true,
+      "slug": "",
+      "overview": "",
+      "gallery": [],
+      "specs": [
+        {
+          "label": "Model",
+          "value": "CDC80",
+          "highlight": false
+        },
+        {
+          "label": "Airflow",
+          "value": "195 CMH",
+          "highlight": true
+        },
+        {
+          "label": "Power",
+          "value": "1.2 kW",
+          "highlight": true
+        },
+        {
+          "label": "Filtration",
+          "value": "Pre-filter + HEPA",
+          "highlight": false
+        },
+        {
+          "label": "Stated efficiency",
+          "value": "99.99% at 0.3 μm",
+          "highlight": true
+        }
+      ],
+      "features": [],
+      "applications": []
+    },
+    {
+      "id": "p008",
+      "name": "Drum type dust collector",
+      "category": "bag-cyclone",
+      "description": "TD760 · 2,000 CMH · 3 HP · 150 mm inlet · bag filtration rated 99% at 5 μm.",
+      "image": "assets/products/drum-dust-collector-td760.jpg",
+      "alt": "TD760 drum type dust collector",
+      "link": "",
+      "visible": true,
+      "slug": "",
+      "overview": "",
+      "gallery": [],
+      "specs": [
+        {
+          "label": "Model",
+          "value": "TD760",
+          "highlight": false
+        },
+        {
+          "label": "Airflow",
+          "value": "2,000 CMH",
+          "highlight": true
+        },
+        {
+          "label": "Motor",
+          "value": "3 HP",
+          "highlight": true
+        },
+        {
+          "label": "Inlet",
+          "value": "150 mm",
+          "highlight": false
+        },
+        {
+          "label": "Filter",
+          "value": "Bag filter",
+          "highlight": false
+        },
+        {
+          "label": "Stated efficiency",
+          "value": "99% at 5 μm",
+          "highlight": true
+        }
+      ],
+      "features": [],
+      "applications": []
+    },
+    {
+      "id": "p009",
+      "name": "Downdraft Table",
+      "category": "workstations",
+      "description": "1,500 CMH · 3 HP · automatic pulse cleaning · cartridge filter · 99.9% stated for 0.2–2 μm.",
+      "image": "assets/products/downdraft-table-pd1500.jpg",
+      "alt": "PD1500 downdraft table workstation",
+      "link": "",
+      "visible": true,
+      "slug": "",
+      "overview": "",
+      "gallery": [],
+      "specs": [
+        {
+          "label": "Model",
+          "value": "PD1500",
+          "highlight": false
+        },
+        {
+          "label": "Airflow",
+          "value": "1,500 CMH",
+          "highlight": true
+        },
+        {
+          "label": "Motor",
+          "value": "3 HP",
+          "highlight": true
+        },
+        {
+          "label": "Filter",
+          "value": "Cartridge filter",
+          "highlight": false
+        },
+        {
+          "label": "Cleaning",
+          "value": "Automatic pulse cleaning",
+          "highlight": false
+        },
+        {
+          "label": "Stated efficiency",
+          "value": "99.9% for 0.2–2 μm",
+          "highlight": true
+        }
+      ],
+      "features": [],
+      "applications": []
+    },
+    {
+      "id": "p010",
+      "name": "Pharmaceutical Dust Collector",
+      "category": "specialised",
+      "description": "PDC01 · 1,360 CMH · 2 HP · SS304 construction · antistatic polypropylene cartridge filter.",
+      "image": "",
+      "alt": "",
+      "link": "",
+      "visible": true,
+      "slug": "",
+      "overview": "",
+      "gallery": [],
+      "specs": [
+        {
+          "label": "Model",
+          "value": "PDC01",
+          "highlight": false
+        },
+        {
+          "label": "Airflow",
+          "value": "1,360 CMH",
+          "highlight": true
+        },
+        {
+          "label": "Motor",
+          "value": "2 HP",
+          "highlight": true
+        },
+        {
+          "label": "Construction",
+          "value": "SS304",
+          "highlight": true
+        },
+        {
+          "label": "Filter",
+          "value": "Antistatic polypropylene cartridge",
+          "highlight": false
+        }
+      ],
+      "features": [],
+      "applications": []
+    },
+    {
+      "id": "p011",
+      "name": "Auto roller Paint booth– Dry type",
+      "category": "workstations",
+      "description": "Dry-type booth. Confirm booth dimensions, airflow, and filter configuration against the painting process.",
+      "image": "",
+      "alt": "",
+      "link": "",
+      "visible": true,
+      "slug": "",
+      "overview": "",
+      "gallery": [],
+      "specs": [
+        {
+          "label": "Type",
+          "value": "Dry-type paint booth",
+          "highlight": true
+        },
+        {
+          "label": "Configuration",
+          "value": "Booth dimensions, airflow and filters confirmed against the painting process",
+          "highlight": false
+        }
+      ],
+      "features": [],
+      "applications": []
+    },
+    {
+      "id": "p012",
+      "name": "Portable Paint booth – Dry Type",
+      "category": "workstations",
+      "description": "Portable dry-type booth. Confirm dimensions, airflow, and filtration requirements for the application.",
+      "image": "",
+      "alt": "",
+      "link": "",
+      "visible": true,
+      "slug": "",
+      "overview": "",
+      "gallery": [],
+      "specs": [
+        {
+          "label": "Type",
+          "value": "Portable dry-type paint booth",
+          "highlight": true
+        },
+        {
+          "label": "Configuration",
+          "value": "Dimensions, airflow and filtration confirmed for the application",
+          "highlight": false
+        }
+      ],
+      "features": [],
+      "applications": []
+    },
+    {
+      "id": "p013",
+      "name": "High vacuum dust collector",
+      "category": "specialised",
+      "description": "HVDC-3KW model shown · high-vacuum source extraction. Request model-specific airflow and filtration data.",
+      "image": "assets/products/high-vacuum-dust-collector.jpg",
+      "alt": "HVDC high vacuum dust collector",
+      "link": "",
+      "visible": true,
+      "slug": "",
+      "overview": "",
+      "gallery": [],
+      "specs": [
+        {
+          "label": "Model shown",
+          "value": "HVDC-3KW",
+          "highlight": true
+        },
+        {
+          "label": "Extraction",
+          "value": "High-vacuum source extraction",
+          "highlight": true
+        },
+        {
+          "label": "Airflow & filtration",
+          "value": "Model-specific — on request",
+          "highlight": false
+        }
+      ],
+      "features": [],
+      "applications": []
+    },
+    {
+      "id": "p014",
+      "name": "Two stage dust collector",
+      "category": "bag-cyclone",
+      "description": "TD860 · 2,380 m³/h · 5 HP · cyclone + cartridge stages · automatic pulse cleaning · up to 2 μm stated.",
+      "image": "assets/products/two-stage-dust-collector-td860.jpg",
+      "alt": "TD860 two stage dust collector",
+      "link": "",
+      "visible": true,
+      "slug": "",
+      "overview": "",
+      "gallery": [],
+      "specs": [
+        {
+          "label": "Model",
+          "value": "TD860",
+          "highlight": false
+        },
+        {
+          "label": "Airflow",
+          "value": "2,380 m³/h",
+          "highlight": true
+        },
+        {
+          "label": "Motor",
+          "value": "5 HP",
+          "highlight": true
+        },
+        {
+          "label": "Stages",
+          "value": "Cyclone + cartridge",
+          "highlight": false
+        },
+        {
+          "label": "Cleaning",
+          "value": "Automatic pulse cleaning",
+          "highlight": false
+        },
+        {
+          "label": "Stated filtration",
+          "value": "Up to 2 μm",
+          "highlight": true
+        }
+      ],
+      "features": [],
+      "applications": []
+    },
+    {
+      "id": "p015",
+      "name": "Wet dust collector",
+      "category": "specialised",
+      "description": "3,500 CMH · 7.5 HP · SS304 · stated efficiency up to 99% at 3 μm.",
+      "image": "",
+      "alt": "",
+      "link": "",
+      "visible": true,
+      "slug": "",
+      "overview": "",
+      "gallery": [],
+      "specs": [
+        {
+          "label": "Airflow",
+          "value": "3,500 CMH",
+          "highlight": true
+        },
+        {
+          "label": "Motor",
+          "value": "7.5 HP",
+          "highlight": true
+        },
+        {
+          "label": "Construction",
+          "value": "SS304",
+          "highlight": false
+        },
+        {
+          "label": "Stated efficiency",
+          "value": "Up to 99% at 3 μm",
+          "highlight": true
+        }
+      ],
+      "features": [],
+      "applications": []
+    },
+    {
+      "id": "p016",
+      "name": "Pulse jet dust collector PD1210",
+      "category": "pulse-jet",
+      "description": "1,290 CMH · 1.5 kW · MERV 15 cartridge · automatic pulse cleaning · 150 mm inlet.",
+      "image": "assets/products/pulse-jet-dust-collector-pd1210.jpg",
+      "alt": "Portable pulse jet dust collector PD1210",
+      "link": "",
+      "visible": true,
+      "slug": "",
+      "overview": "",
+      "gallery": [],
+      "specs": [
+        {
+          "label": "Model",
+          "value": "PD1210",
+          "highlight": false
+        },
+        {
+          "label": "Airflow",
+          "value": "1,290 CMH",
+          "highlight": true
+        },
+        {
+          "label": "Power",
+          "value": "1.5 kW",
+          "highlight": true
+        },
+        {
+          "label": "Filter",
+          "value": "MERV 15 cartridge",
+          "highlight": true
+        },
+        {
+          "label": "Cleaning",
+          "value": "Automatic pulse cleaning",
+          "highlight": false
+        },
+        {
+          "label": "Inlet",
+          "value": "150 mm",
+          "highlight": false
+        }
+      ],
+      "features": [],
+      "applications": []
+    },
+    {
+      "id": "p017",
+      "name": "Pulse jet dust collector PD1220",
+      "category": "pulse-jet",
+      "description": "2,000 CMH · 2.2 kW · MERV 15 cartridge · two-stage filtration · automatic pulse cleaning.",
+      "image": "assets/products/pulse-jet-dust-collector-pd1220.jpg",
+      "alt": "Portable pulse jet dust collector PD1220",
+      "link": "",
+      "visible": true,
+      "slug": "",
+      "overview": "",
+      "gallery": [],
+      "specs": [
+        {
+          "label": "Model",
+          "value": "PD1220",
+          "highlight": false
+        },
+        {
+          "label": "Airflow",
+          "value": "2,000 CMH",
+          "highlight": true
+        },
+        {
+          "label": "Power",
+          "value": "2.2 kW",
+          "highlight": true
+        },
+        {
+          "label": "Filter",
+          "value": "MERV 15 cartridge",
+          "highlight": true
+        },
+        {
+          "label": "Filtration",
+          "value": "Two-stage",
+          "highlight": false
+        },
+        {
+          "label": "Cleaning",
+          "value": "Automatic pulse cleaning",
+          "highlight": false
+        }
+      ],
+      "features": [],
+      "applications": []
+    }
+  ]
+}
