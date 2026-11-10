@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /data/
+Disallow: /includes/
+
+Sitemap: https://www.dustcollector.in/sitemap.xml
