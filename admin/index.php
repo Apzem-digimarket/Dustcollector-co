@@ -141,6 +141,8 @@ $asset = function (string $file): string {
           'productPattern' => pretty_urls() ? 'products/' : 'product.php?p=',
           'uploadLimit' => upload_limit_bytes(),
           'uploadLimitText' => format_bytes(upload_limit_bytes()),
+          'canPublish' => can_publish(),
+          'publish' => publish_status(),
       ],
       JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_UNESCAPED_UNICODE
   ) ?></script>

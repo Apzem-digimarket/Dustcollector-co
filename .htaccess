@@ -48,7 +48,7 @@ ErrorDocument 404 /product.php
 </IfModule>
 
 # Never serve hidden files, notes, backups, logs or temp files
-<FilesMatch "(^\.|\.(bak|tmp|log|md|zip)$)">
+<FilesMatch "(^\.|\.(bak|tmp|log|md|zip|sh)$)">
   <IfModule mod_authz_core.c>
     Require all denied
   </IfModule>

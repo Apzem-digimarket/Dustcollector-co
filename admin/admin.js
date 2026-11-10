@@ -101,6 +101,7 @@
         const data = await api('save', { json: { content: snapshot } });
         content = data.content;
         toast(message);
+        markUnpublished();
         return true;
       } catch (err) {
         if (err.message !== 'Session ended') toast(err.message, 'error');
@@ -700,6 +701,51 @@
   window.addEventListener('beforeunload', (ev) => {
     if (ui.panelDirty) { ev.preventDefault(); ev.returnValue = ''; }
   });
+
+  /* ---------- Publish to website (admin on this Mac only) ---------- */
+
+  let publishBtn = null;
+  let publishInfo = null;
+  let publishState = initial.publish || { lastPublish: '', unpublished: false };
+
+  function paintPublish() {
+    if (!publishBtn) return;
+    publishBtn.classList.toggle('has-changes', !!publishState.unpublished);
+    publishBtn.title = publishState.unpublished ? 'You have changes that are not on the live website yet' : 'The live website is up to date';
+    publishInfo.textContent = publishState.lastPublish ? 'Last published ' + publishState.lastPublish : 'Not published yet';
+  }
+  function markUnpublished() {
+    publishState.unpublished = true;
+    paintPublish();
+  }
+
+  async function publish() {
+    if (!confirm('Publish your changes to the live website (www.dustcollector.in)?')) return;
+    publishBtn.disabled = true;
+    publishBtn.classList.add('busy');
+    publishBtn.lastChild.textContent = 'Publishing…';
+    try {
+      const data = await api('publish');
+      publishState = { lastPublish: data.lastPublish, unpublished: false };
+      toastLink(data.changed ? 'Published. The website updates in about 1 minute' : 'The website is already up to date', 'https://www.dustcollector.in/');
+    } catch (err) {
+      if (err.message !== 'Session ended') toast(err.message, 'error');
+    } finally {
+      publishBtn.disabled = false;
+      publishBtn.classList.remove('busy');
+      publishBtn.lastChild.textContent = 'Publish to website';
+      paintPublish();
+    }
+  }
+
+  if (initial.canPublish) {
+    const actions = document.querySelector('.topbar-actions');
+    publishInfo = h('span', { class: 'publish-info' });
+    publishBtn = h('button', { type: 'button', class: 'btn btn-primary btn-publish', onclick: publish },
+      h('span', { class: 'publish-dot', 'aria-hidden': 'true' }), h('span', {}, 'Publish to website'));
+    actions.prepend(h('div', { class: 'publish-wrap' }, publishBtn, publishInfo));
+    paintPublish();
+  }
 
   render();
 })();

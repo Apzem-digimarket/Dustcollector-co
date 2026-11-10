@@ -11,3 +11,7 @@ uploads/*
 .DS_Store
 *.tmp
 *.zip
+
+# GitHub Pages publish output (separate gh-pages worktree) and its timestamp
+.publish/
+data/last-publish.txt

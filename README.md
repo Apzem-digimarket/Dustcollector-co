@@ -21,7 +21,17 @@ There's no database. Content is stored in `data/content.json`, and photos upload
 - PHP **7.4 or newer**, on Apache or LiteSpeed (any standard cPanel host)
 - `mod_rewrite` for clean `/products/<name>` addresses. Without it, links fall back to `product.php?p=<name>`.
 
-**GitHub Pages can't run this site, because it needs PHP.** Deploy it to PHP hosting instead; [DEPLOY.md](DEPLOY.md) has the steps.
+## How the live site is published (current setup)
+
+www.dustcollector.in is served by **GitHub Pages** from the `gh-pages` branch. GitHub Pages can't run PHP, so that branch holds a **static copy** of the site, built from the PHP version:
+
+1. Run the site locally (see below) and edit products in the admin at http://127.0.0.1:8771/admin/.
+2. Click **Publish to website** in the admin's top bar, or run `./publish.sh` in Terminal.
+3. `publish.sh` builds the home page, every visible product page, the 404 page and the sitemap. It copies the images, CSS and JS into `.publish/`, a git worktree of `gh-pages`, then commits and pushes. GitHub Pages updates about a minute later.
+
+`main` holds the PHP source and `gh-pages` holds the generated site. Don't edit `gh-pages` by hand, because it's replaced on every publish. The publish button only works in the admin on this Mac, never through a tunnel or on a web host.
+
+**Moving to PHP hosting later** (to edit products online from anywhere): follow [DEPLOY.md](DEPLOY.md), then point the domain's DNS at the host and turn off GitHub Pages.
 
 ## Run it locally
 

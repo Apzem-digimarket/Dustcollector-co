@@ -96,6 +96,24 @@ try {
             $_SESSION['admin_key'] = substr(admin_account()['hash'], -16);   // stay logged in here
             respond(200, ['email' => $email]);
 
+        case 'publish':
+            if (!can_publish()) {
+                respond(403, ['error' => 'Publishing is only available in the admin on your Mac (http://127.0.0.1:8771/admin/).']);
+            }
+            if ((int) getenv('PHP_CLI_SERVER_WORKERS') < 2) {
+                respond(400, ['error' => 'Restart the local site with workers: PHP_CLI_SERVER_WORKERS=8 php -S 127.0.0.1:8771 router.php — or run ./publish.sh in Terminal.']);
+            }
+            @set_time_limit(300);
+            $output = [];
+            $exit = 0;
+            exec('/bin/bash ' . escapeshellarg(ROOT_DIR . '/publish.sh') . ' 2>&1', $output, $exit);
+            $log = implode("\n", $output);
+            if ($exit !== 0) {
+                $errors = preg_grep('/^ERROR:|fatal:|error:/i', $output);
+                respond(500, ['error' => 'Publishing failed. ' . ($errors ? trim(end($errors)) : 'See the details below.'), 'log' => $log]);
+            }
+            respond(200, ['log' => $log, 'changed' => strpos($log, 'No changes') === false] + publish_status());
+
         default:
             respond(404, ['error' => 'Unknown action.']);
     }

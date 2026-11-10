@@ -477,6 +477,30 @@ function client_ip(): string
     return $ip !== '' ? $ip : 'unknown';
 }
 
+/**
+ * Publishing to GitHub Pages is only allowed from the admin running on this Mac
+ * (PHP's built-in server, opened directly at 127.0.0.1, not through a tunnel), never on a web host.
+ */
+function can_publish(): bool
+{
+    return PHP_SAPI === 'cli-server'
+        && in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0.0.1', '::1'], true)
+        && empty($_SERVER['HTTP_CF_CONNECTING_IP'])
+        && empty($_SERVER['HTTP_X_FORWARDED_FOR'])
+        && is_file(ROOT_DIR . '/publish.sh')
+        && function_exists('exec');
+}
+
+/** When the site was last published, and whether content changed since then. */
+function publish_status(): array
+{
+    $stamp = DATA_DIR . '/last-publish.txt';
+    $last = is_file($stamp) ? trim((string) file_get_contents($stamp)) : '';
+    clearstatcache();
+    $pending = !is_file($stamp) || (is_file(CONTENT_FILE) && filemtime(CONTENT_FILE) > filemtime($stamp));
+    return ['lastPublish' => $last, 'unpublished' => $pending];
+}
+
 function client_key(): string
 {
     return hash('sha256', client_ip());

@@ -21,7 +21,7 @@ function deny(): bool
 // Private folders, hidden files, notes/backups/logs, this router, and scripts in uploads.
 if (preg_match('~^/(data|includes)(/|$)~', $path)
     || preg_match('~/\.~', $path)
-    || preg_match('~\.(md|log|zip|bak|tmp)$~i', $path)
+    || preg_match('~\.(md|log|zip|bak|tmp|sh)$~i', $path)
     || $path === '/router.php'
     || preg_match('~^/uploads/.*\.(php\d?|phtml|phar)$~i', $path)
     || strpos($path, '..') !== false) {
